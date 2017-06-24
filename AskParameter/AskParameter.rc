@@ -1,0 +1,193 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <WinDef.h>
+#include <WinUser.h>
+#include <CommCtrl.h>
+
+#if !defined(IDC_STATIC)
+#define IDC_STATIC	-1
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+// #ifdef _WIN32
+// LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+// #pragma code_page(1252)
+// #endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_HOST_DATA DIALOG  0, 0, 167, 58
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Proxy Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Proxy Host",IDC_STATIC,2,1,61,12
+    LTEXT           "Proxy Username",IDC_STATIC,2,15,62,12
+    LTEXT           "Proxy Password",IDC_STATIC,2,29,61,12
+    EDITTEXT        IDC_EDIT_PROXY_HOST,66,1,100,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PROXY_USERNAME,66,15,100,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PROXY_PASSWORD,66,29,100,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,1,43,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,43,50,14
+END
+
+IDD_AskRunDlgProc DIALOGEX 22, 17, 255, 232
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "InstantVNC"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Please provide the connection information you want InstantVNC to use as the default when it starts up.",IDC_STATIC,5,45,97,33
+    RTEXT           "Address:",IDC_STATIC,101,43,41,10
+    EDITTEXT        IDC_EDIT_ADDR,145,41,85,12,ES_AUTOHSCROLL | ES_WANTRETURN
+    RTEXT           "Password:",IDC_STATIC,101,58,41,10
+    EDITTEXT        IDC_EDIT_PWD,145,56,85,12,ES_PASSWORD | ES_AUTOHSCROLL | ES_WANTRETURN
+    RTEXT           "Login Name:",IDC_STATIC,101,73,41,10
+    EDITTEXT        IDC_EDIT_NAME,145,71,85,12,ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "Leave ""Login Name"" blank to use the Windows PC name. Use the keyword PROMPT in any field to prompt at runtime.",IDC_STATIC,5,85,132,25
+    PUSHBUTTON      "Advanced Setting...",IDC_BTN_ADVANCED,145,87,85,15
+    CONTROL         "Debug Logging",IDC_DEBUG_LOGGING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,118,65,10
+    PUSHBUTTON      "Change Icon...",IDC_CHANGE_ICON_BTN,118,112,54,14
+    PUSHBUTTON      "load",IDC_BTN_LOAD,222,25,22,12
+    CONTROL         "",IDC_LOCK_ADDR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,237,43,8,8
+    CONTROL         "",IDC_LOCK_PWD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,237,58,8,8
+    CONTROL         "",IDC_LOCK_NAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,237,73,8,8
+    CONTROL         "",IDC_LOCK_ADVBTN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,237,90,8,8
+    ICON            IDI_LOCK,IDC_STATIC,231,97,20,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE
+    CONTROL         "InstantVNC should auto-exit 30 seconds after the last Viewer disconnects",IDC_AUTO_EXIT_AFTER_LAST_VIEWER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,130,245,10
+    CONTROL         "InstantVNC should auto-exit in 5 minutes if no Viewer connects",IDC_AUTO_EXIT_IF_NO_VIEWER,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,142,212,10
+    DEFPUSHBUTTON   "SAVE",IDOK,39,201,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,177,201,50,14
+    LTEXT           "InstantVNC:",IDC_STATIC_VNC_VERSION,3,218,40,10
+    LTEXT           "ver 2.00",IDC_STATIC_NUMBER_VNC_VERSION,47,218,41,10
+    LTEXT           "echoWare:",IDC_STATIC_DLL_VERSION,156,218,36,10
+    LTEXT           "ver 1.99",IDC_STATIC_NUMBER_DLL_VERSION,195,218,55,10
+    CONTROL         "InstantVNC should create random passwords",IDC_CREATE_RANDOM_PASSWORDS,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,154,212,10
+    PUSHBUTTON      "ChangeText...",IDC_CHANGE_TEXT_BTN,176,112,54,14
+    CONTROL         "Enable dual-monitor support",IDC_ALLOW_DUAL_MON,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,165,212,10
+    CONTROL         "Use mini-GUI in normal mode",IDC_USE_MINI_GUI,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,176,212,10
+    CONTROL         "Display help screen on startup",IDC_DISPLAY_STARTUP_HELP,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,187,212,10
+END
+
+IDD_Text DIALOG  0, 0, 230, 162
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "InstantVNC - Change captions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Save",IDOK,64,145,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,118,145,50,14
+    LISTBOX         IDC_TextList,2,2,225,96,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_Text,2,101,225,40,ES_MULTILINE | ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RCDATA
+//
+
+IDR_BANNER              RCDATA                  ".\\res\\Banner.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_LOCK                ICON                    ".\\res\\lock.ico"
+IDI_DEFAULT_ICON        ICON                    ".\\res\\BlueEye.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_HOST_DATA, DIALOG
+    BEGIN
+        RIGHTMARGIN, 157
+    END
+
+    IDD_AskRunDlgProc, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_Text, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

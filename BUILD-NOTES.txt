@@ -1,0 +1,7 @@
+
+Build Notes - ver. 1.43
+-----------------------
+
+In additon to the icon file, InstantVNC depends on three zip files here during build: DLL.zip, ask.zip and main.zip.
+
+The zip files are automatically generated during the build process. Main.zip contains the miniWinVNC.exe application, while Ask.zip contains the AskParameter.exe application, while Dll.zip contains the echoWare DLL.

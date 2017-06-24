@@ -1,0 +1,537 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STARTUP DIALOGEX 0, 0, 234, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "InstantVNC"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,93,100,50,14
+    EDITTEXT        IDC_STATIC_ABOUT,1,40,232,37,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | NOT WS_BORDER
+END
+
+IDD_TEXTCHAT_DLG DIALOGEX 0, 0, 307, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION " Chat - InstantVNC"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_INPUTAREA_EDIT,4,135,255,39,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL,WS_EX_STATICEDGE
+    PUSHBUTTON      "Send",IDC_SEND_B,264,135,39,16,BS_MULTILINE
+    PUSHBUTTON      "Minimize",IDC_HIDE_B,264,153,39,11
+    PUSHBUTTON      "Close",IDCANCEL,264,164,39,11
+    CONTROL         "",IDC_CHATAREA_EDIT,"RICHEDIT",TCS_RAGGEDRIGHT | TCS_FOCUSONBUTTONDOWN | WS_VSCROLL | WS_TABSTOP,4,4,300,128,WS_EX_STATICEDGE
+    PUSHBUTTON      "",IDOK,301,0,6,6,NOT WS_VISIBLE
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 272, 162
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About InstantVNC"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,142,54,16
+    ICON            IDR_ICON_BLUE_EYE,IDR_ICON_BLUE_EYE,21,14,21,20,SS_CENTERIMAGE | SS_REALSIZEIMAGE,WS_EX_TRANSPARENT
+    LTEXT           "InstantVNC is based with thanks on the Ultr@VNC Server.",IDC_VERSION,69,13,195,10
+    LTEXT           "Copyright © 2002-2003 Ultr@VNC Team\nCopyright © 2001-2002 Sam - eSVNC \nCopyright © 1999-2002 Rudi D. V. - VdaccVNC \nCopyright © 2001 Harakan Software - PalmVNC\nCopyright © 1999-2002 Const. Kaplinsky - TightVNC \n",IDC_NAME,70,42,202,41
+    LTEXT           "For more Information and Links please visit:",IDC_WWW,70,141,189,9
+    LTEXT           "Version 2.00;",IDC_BUILDTEXT,70,24,44,9
+    LTEXT           "BuildTime",IDC_BUILDTIME,120,24,92,8
+    LTEXT           "Copyright © 2002 RealVNC Ltd. - RealVNC\nCopyright © 1999-2002 Tridia Corporation - TridiaVNC \nCopyright © 1994-2001 AT&&T Laboratories Cambridge/Olivetti Research Ltd. - VNC",IDC_STATIC,70,82,197,32
+    LTEXT           "Copyright © 1990-2002 Info-ZIP\nCopyright © 1996-2002 Markus Franz Xaver Johannes Oberhumer - Mini LZO library",IDC_STATIC,70,114,180,27
+    LTEXT           "Copyright © 2005-2010, Echogent Systems, Inc.",IDC_STATIC,70,34,158,9
+    LTEXT           "http://echovnc.sourceforge.net",IDC_STATIC_LINK,70,151,101,8
+    LTEXT           "",IDC_PWD,70,3,186,8
+END
+
+IDD_AskRunDlgProc DIALOGEX 22, 17, 252, 145
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "InstantVNC"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Click OKAY below to allow InstantVNC to make a connection to this echoServer:",IDC_STATIC41057,5,58,98,47
+    RTEXT           "Address:",IDC_STATIC41053,115,45,41,10
+    EDITTEXT        IDC_EDIT_ADDR,159,43,90,12,ES_AUTOHSCROLL | ES_WANTRETURN
+    RTEXT           "Password:",IDC_STATIC41054,115,60,41,10
+    EDITTEXT        IDC_EDIT_PWD,159,58,90,12,ES_PASSWORD | ES_AUTOHSCROLL | ES_WANTRETURN
+    RTEXT           "Login Name:",IDC_STATIC41055,115,75,41,10
+    EDITTEXT        IDC_EDIT_NAME,159,73,90,12,ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "Advanced Setting...",IDC_BTN_ADVANCED,159,89,89,15
+    CTEXT           "After you click OKAY your PC will accept remote control.",IDC_STATIC41056,5,107,243,10
+    DEFPUSHBUTTON   "OK",IDOK,39,118,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,171,118,50,14
+    LTEXT           "InstantVNC:",IDC_STATIC_VNC_VERSION,3,134,40,10
+    LTEXT           "ver 2.00",IDC_STATIC_NUMBER_VNC_VERSION,47,134,46,10
+    LTEXT           "echoWare:",IDC_STATIC_DLL_VERSION,154,134,36,10
+    LTEXT           "ver 1.99",IDC_STATIC_NUMBER_DLL_VERSION,193,134,54,10
+END
+
+IDD_HOST_DATA DIALOG  0, 0, 167, 58
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Proxy Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Proxy Host",IDC_STATIC41060,2,1,60,12
+    LTEXT           "Proxy Username",IDC_STATIC41061,2,15,60,12
+    LTEXT           "Proxy Password",IDC_STATIC41062,2,29,61,12
+    EDITTEXT        IDC_EDIT_PROXY_HOST,66,1,100,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PROXY_USERNAME,66,15,100,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PROXY_PASSWORD,66,29,100,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,1,43,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,43,50,14
+END
+
+IDD_USERNAME DIALOG  0, 0, 248, 50
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "InstantVNC - Enter Login Name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,164,11,79,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,70,30,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,128,30,50,14
+    LTEXT           "Please provide a login password for InstantVNC:",IDC_STATIC_LABEL,3,13,158,8
+END
+
+IDD_MSLOGON DIALOG  0, 0, 186, 166
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MS logon setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,77,148,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,132,148,50,14
+    EDITTEXT        IDC_GROUP1,21,19,93,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUP2,21,36,93,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUP3,21,53,93,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CHECKG1L,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,20,13,10
+    CONTROL         "",IDC_CHECKG2L,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,38,16,8
+    CONTROL         "",IDC_CHECKG3L,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,56,16,8
+    CONTROL         "",IDC_CHECKG1D,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,22,16,8
+    CONTROL         "",IDC_CHECKG2D,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,38,16,8
+    CONTROL         "",IDC_CHECKG3D,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,56,16,8
+    LTEXT           "Local",IDC_STATIC,127,8,18,8
+    LTEXT           "Domain",IDC_STATIC,153,8,25,8
+    LTEXT           "Group",IDC_STATIC,23,8,20,8
+    LTEXT           "1",IDC_STATIC,11,22,8,8
+    LTEXT           "2",IDC_STATIC,11,38,8,8
+    LTEXT           "3",IDC_STATIC,11,56,8,8
+    LTEXT           "Group 1, 2 = Full Access       Group 3 = Read Only",IDC_STATIC,16,88,162,8
+    LTEXT           "Must be run as a Service on NT4, W2K\nCan be run as a Service or Application on XP, W2003\nLocal admins have always access.\nFor NT4 and W2K in Application mode you need to add the Local Admin Group.",IDC_STATIC,8,100,174,41
+    GROUPBOX        "",IDC_STATIC,5,0,178,74
+    GROUPBOX        "Rules",IDC_STATIC,5,77,178,68
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RCDATA
+//
+
+IDR_BANNER              RCDATA                  "RES\\Banner.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STARTUP, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_TEXTCHAT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 302
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_HOST_DATA, DIALOG
+    BEGIN
+        RIGHTMARGIN, 157
+    END
+
+    IDD_USERNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_MSLOGON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        VERTGUIDE, 17
+        VERTGUIDE, 110
+        VERTGUIDE, 123
+        VERTGUIDE, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+        HORZGUIDE, 46
+        HORZGUIDE, 66
+        HORZGUIDE, 88
+        HORZGUIDE, 105
+        HORZGUIDE, 164
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,00,0,0
+ PRODUCTVERSION 2,00,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904b0"
+        BEGIN
+            VALUE "CompanyName", "Echogent Systems, Inc."
+            VALUE "FileDescription", "VNC server for Win32"
+            VALUE "FileVersion", "2, 00, 0, 0"
+            VALUE "InternalName", "InstantVNC"
+            VALUE "LegalCopyright", "Copyright Echogent Systems, Inc."
+            VALUE "OriginalFilename", "InstantVNC.exe"
+            VALUE "ProductName", "InstantVNC"
+            VALUE "ProductVersion", "2, 00, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAYMENU MENU 
+BEGIN
+    POPUP "tray"
+    BEGIN
+        MENUITEM "&About...",                   ID_ABOUT
+        MENUITEM "&Connect...",                 ID_CONNECT
+        MENUITEM "Auto-start after &Reboot...", ID_AUTORUN
+        MENUITEM "&Disable auto-start...",      ID_STOP_AUTORUN
+        MENUITEM "&Exit",                       ID_CLOSE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_WINVNC              ICON                    "res\\BlueEye.ico"
+IDI_FLASH               ICON                    "res\\icon2.ico"
+IDR_ICON_BLUE_EYE       ICON                    "res\\BlueEye.ico"
+IDR_ICON_BLACK_EYE      ICON                    "res\\BlackEye.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_LOGO64              BITMAP                  "res\\vnc-1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDI_WINVNC              "InstantVNC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FAILED_INIT          "Failed to initialise the socket system"
+    ID_NO_EXIST_INST        "No existing instance of InstantVNC could be contacted"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINVNC_ERROR         "InstantVNC Error"
+    ID_WINVNC_WARNIN        "InstantVNC Warning"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_DESKTOP_BITBLT_ROOT  "vncDesktop : root device doesn't support BitBlt\nWinVNC cannot be used with this graphic device driver"
+    ID_DESKTOP_BITBLT_MEM   "vncDesktop : memory device doesn't support GetDIBits\nWinVNC cannot be used with this graphics device driver"
+    ID_DESKTOP_PLANAR_NOTC  "vncDesktop : current display is PLANAR, not CHUNKY!\nWinVNC cannot be used with this graphics device driver"
+    ID_OUTGOING_CONNECTION  "Outgoing Connection"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_RICHED32_UNLOAD      "Unable to load the Rich Edit (RICHED32.DLL) control!"
+    ID_RICHED32_DLL_LD      "Rich Edit Dll Loading"
+    ID_ULTRAVNC_TEXTCHAT    "The selected client is not an EchoVNC Viewer !\nIt presumably does not support TextChat\n"
+    ID_CHAT_WITH_S_ULTRAVNC "Chat with <%s> - InstantVNC"
+    IDS_INSTANTVNC_NOADDRESS "Empty Address has been found"
+    IDS_INSTANTVNC_NONAME   "Empty Login Name has been found"
+    IDS_INSTANTVNC_NOPASSWORD "Empty Password has been found"
+    IDS_ADDRESS41053        "Address:"
+    IDS_PASSWORD41054       "Password:"
+    IDS_LOGINNAME41055      "Login Name:"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HINT41056           "After you click OKAY your PC will accept remote control."
+    IDS_HINT41057           "Click OKAY below to allow InstantVNC to make a connection to this echoServer:"
+    IDS_OK41058             "OK"
+    IDS_Cancel41059         "Cancel"
+    IDS_PROXYHOST41060      "Proxy Host:"
+    IDS_PROXYUSER41061      "Proxy Username"
+    IDS_PROXYPASS41062      "Proxy Password"
+    IDS_SEND41063           "Send"
+    IDS_MINIMIZE41064       "Minimize"
+    IDS_CLOSE41065          "Close"
+    IDS_ADVSETTINGS41066    "Advanced Settings..."
+    IDS_ERROR41067          "Sorry...InstantVNC cannot find the required echoWare DLL"
+    IDS_ERROR41068          "Sorry...cannot find a server at <#ADDRESS>"
+    IDS_ERROR41069          "EchoServer has not been found at #ADDRESS:#PORT\n\nVerify that you have entered correct EchoServer IP/DNS."
+    IDS_ERROR41070          "EchoServer: #ADDRESS\n\nFailed to connect to the EchoServer.\n\nVerify that you have entered correct userID, password and EchoServer IP/DNS."
+    IDS_ERROR41071          "Success! You are now connected to <#ADDRESS> as\r\n<#USER>. To end this connection, right-click the service\r\ntray icon below, and select EXIT."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR41072          "Success! You are now connected to <#ADDRESS> as\r\n<#USER>. To end this connection, right-click the service\r\ntray icon below, and select EXIT.\r\nThe login password for this session is #PASS"
+    IDS_ERROR41073          "Contacting server at <#ADDRESS>..."
+    IDS_ERROR41074          "Authenticating with server..."
+    IDS_ERROR41075          "Resolving <#ADDRESS>..."
+    IDS_STRING41076         "Disconnect"
+    IDS_STRING41077         "Connect"
+    IDS_STRING41078         "About..."
+    IDS_STRING41079         "Exit"
+    IDS_WWW41080            "For more Information and Links please visit:"
+    IDS_STRING41081         "Connected to:"
+    IDS_STRING41082         "Connected as:"
+    IDS_STRING41083         "Not Listening"
+    IDS_STRING41084         "Please provide an address for InstantVNC:"
+    IDS_STRING41085         "Please provide a login name for InstantVNC:"
+    IDS_STRING41086         "Please provide a login password for InstantVNC:"
+    IDS_STRING41087         "InstantVNC - Enter Address"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING41088         "InstantVNC - Enter Login Name"
+    IDS_STRING41089         "InstantVNC - Enter Login Password"
+    IDS_STRING41090         "The login password for this session is #PASS"
+    IDS_STRING41091         "Password: "
+    IDS_STRING41092         "Auto-start at &Reboot..."
+    IDS_STRING41093         "&Disable auto-start..."
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Help DIALOGEX 0, 0, 287, 263
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "InstantVNC - Help"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,119,242,50,14
+    GROUPBOX        "",IDC_STATIC,7,4,273,231
+    LTEXT           "Welcome to InstantVNC version 2.00",IDC_STATIC,17,18,221,8
+    LTEXT           "< area for help text >",IDC_ST_TEXT,16,35,255,195
+END
+
+IDD_ELEVATE_PRIVILEGES DIALOGEX 0, 0, 143, 110
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Need Administrator privilege"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Please provide username and password of an user with administrative privilege on this computer",IDC_ELEVATE_INFO_TEXT,7,7,129,26
+    LTEXT           "Username",IDC_ELEVATE_USER,7,43,46,8
+    EDITTEXT        IDC_ELEVATED_ACCT_USER,56,41,80,14,ES_AUTOHSCROLL
+    LTEXT           "Password",IDC_ELEVATE_PWD,7,66,46,8
+    EDITTEXT        IDC_ELEVATED_ACCT_PWD,56,65,80,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,15,88,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,88,50,14
+END
+
+IDD_SERICE_PASSWORD DIALOGEX 0, 0, 166, 106
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please choose a password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Please enter a password that remote users will need to provide to access this PC",IDC_SERVICE_ASK_PASSWORD,7,7,152,21
+    LTEXT           "Password",IDC_SERVICE_PWD1,7,38,74,12
+    EDITTEXT        IDC_SERVICE_ASK_PWD1,87,38,67,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password again",IDC_SERVICE_PWD2,7,61,74,12
+    EDITTEXT        IDC_SERVICE_ASK_PWD2,87,61,67,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,20,84,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,84,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_Help, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_ELEVATE_PRIVILEGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_SERICE_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 159
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
