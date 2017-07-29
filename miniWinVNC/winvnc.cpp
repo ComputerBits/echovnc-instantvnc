@@ -815,7 +815,7 @@ DWORD UninstallService()
 					memset(tempPath, '\0', MAX_PATH);
 					GetTempPath(MAX_PATH, tempPath);
 					GetTempFileName(tempPath, "vnc", 0, tempFile);
-					strcpy(tempFile + strlen(tempFile) - 4, ".cmd");
+					strcpy_s(tempFile, strlen(tempFile) - 4, ".cmd");
 
 					hFile = CreateFile(tempFile, GENERIC_WRITE, FILE_SHARE_READ, NULL, CREATE_ALWAYS, 0, NULL);
 					if (hFile != INVALID_HANDLE_VALUE)
