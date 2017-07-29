@@ -39,6 +39,10 @@
 // vncServer to communicate with.
 
 // Includes
+// Ignore warnings about deprecated WINSOCK stuff. 
+// TODO: Fix these properly
+#define _WINSOCK_DEPRECATED_NO_WARNINGS 1
+
 #include "stdhdrs.h"
 #include <omnithread.h>
 #include "resource.h"

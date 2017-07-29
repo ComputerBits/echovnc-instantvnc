@@ -33,6 +33,10 @@ class VSocket;
 ////////////////////////////////////////////////////////
 // System includes
 
+// Ignore warnings about deprecated WINSOCK stuff. 
+// TODO: Fix these properly
+#define _WINSOCK_DEPRECATED_NO_WARNINGS 1
+
 #include "stdhdrs.h"
 #include <iostream>
 
