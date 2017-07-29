@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\echoWare">
+      <UniqueIdentifier>{df953899-56de-4004-b881-a1431238a0b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\echoWare headers">
+      <UniqueIdentifier>{e4682ba2-1640-4638-a5d7-e88213622a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{4befa979-83f2-4167-b9a0-d2f9d2913998}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="black_layered.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="buildtime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CirDlg_Help.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3des.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ElevatePrivilege.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HideDesktop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggingDLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lzo\minilzo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rfbRegion_win32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rfbRegion_X11.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rfbUpdateTracker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="security.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdhdrs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tableinitcmtemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tableinittctemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tabletranstemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextChat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="translate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videodriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videodrivercheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncabout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncauth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncbuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncdesktop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncDesktopSW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncdesktopthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncencodecorre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncencodehext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncencoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncencoderCursor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncencoderre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncEncodeTight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncEncodeUltra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncEncodeZlib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncEncodeZlibHex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncencodezrle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vnckeymap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vnclog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncmenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncMultiMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncntlm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncOSVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncproperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncRegion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncservice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncsetauth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncsockconnect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vnctimedmsgbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vncusernamedlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vsocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="win_vncauth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="winvnc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ZipUnZip32\ZipUnzip32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMON\CommonBase.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMON\ConfigDlg.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\rfb\dh.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMON\EchowareDll.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMON\ParseCmdLine.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyData.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="RectList.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMON\StartupDlg.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMON\UserData.cpp">
+      <Filter>Source Files\echoWare</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMON\irUtility.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="winvnc.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CirDlg_Help.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3des.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ElevatePrivilege.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HideDesktop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keysymdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Localization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggingDLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfbMisc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfbRect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfbRegion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfbRegion_win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfbRegion_X11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rfbUpdateTracker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdhdrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextChat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="translate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videodriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncabout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncauth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncbuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncdesktop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncdesktopthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncencodecorre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncencodehext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncencodemgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncencoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncencoderre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncEncodeTight.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncEncodeUltra.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncEncodeZlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncEncodeZlibHex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncencodezrle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vnckeymap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vnclog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncpasswd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncproperties.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncpropPath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncservice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncsetauth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncsockconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vnctimedmsgbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vncusernamedlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vsocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="winvnc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ZipUnZip32\ZipUnZip32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\CommonBase.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\ConfigDlg.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rfb\dh.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\EchowareDll.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\InterfaceDllProxyInfo.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\ParseCmdLine.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyData.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RectList.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\Serialize.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\StartupDlg.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\UserData.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="vncRegion.h">
+      <Filter>Header Files\echoWare headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMON\irUtility.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\banner.GIF">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BlackEye.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\BlueEye.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\vnc-1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\world3a.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
