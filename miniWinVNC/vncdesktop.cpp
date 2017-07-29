@@ -632,50 +632,27 @@ vncDesktop::KillScreenSaver()
 	OSVERSIONINFO osversioninfo;
 	osversioninfo.dwOSVersionInfoSize = sizeof(osversioninfo);
 
-	// Get the current OS version
-	if (!GetVersionEx(&osversioninfo))
-		return;
-
 	vnclog.Print(LL_INTINFO, VNCLOG("KillScreenSaver..."));
 
-	// How to kill the screen saver depends on the OS
-	switch (osversioninfo.dwPlatformId)
+	// Windows NT
+	// Find the screensaver desktop
+	HDESK hDesk = OpenDesktop(
+		"Screen-saver",
+		0,
+		FALSE,
+		DESKTOP_READOBJECTS | DESKTOP_WRITEOBJECTS
+		);
+	if (hDesk != NULL)
 	{
-	case VER_PLATFORM_WIN32_WINDOWS:
-		{
-			// Windows 95
+		vnclog.Print(LL_INTINFO, VNCLOG("Killing ScreenSaver"));
 
-			// Fidn the ScreenSaverClass window
-			HWND hsswnd = FindWindow ("WindowsScreenSaverClass", NULL);
-			if (hsswnd != NULL)
-				PostMessage(hsswnd, WM_CLOSE, 0, 0); 
-			break;
-		} 
-	case VER_PLATFORM_WIN32_NT:
-		{
-			// Windows NT
-
-			// Find the screensaver desktop
-			HDESK hDesk = OpenDesktop(
-				"Screen-saver",
-				0,
-				FALSE,
-				DESKTOP_READOBJECTS | DESKTOP_WRITEOBJECTS
-				);
-			if (hDesk != NULL)
-			{
-				vnclog.Print(LL_INTINFO, VNCLOG("Killing ScreenSaver"));
-
-				// Close all windows on the screen saver desktop
-				EnumDesktopWindows(hDesk, (WNDENUMPROC) &KillScreenSaverFunc, 0);
-				CloseDesktop(hDesk);
-				// Pause long enough for the screen-saver to close
-				//Sleep(2000);
-				// Reset the screen saver so it can run again
-				SystemParametersInfo(SPI_SETSCREENSAVEACTIVE, TRUE, 0, SPIF_SENDWININICHANGE); 
-			}
-			break;
-		}
+		// Close all windows on the screen saver desktop
+		EnumDesktopWindows(hDesk, (WNDENUMPROC) &KillScreenSaverFunc, 0);
+		CloseDesktop(hDesk);
+		// Pause long enough for the screen-saver to close
+		//Sleep(2000);
+		// Reset the screen saver so it can run again
+		SystemParametersInfo(SPI_SETSCREENSAVEACTIVE, TRUE, 0, SPIF_SENDWININICHANGE); 
 	}
 }
 

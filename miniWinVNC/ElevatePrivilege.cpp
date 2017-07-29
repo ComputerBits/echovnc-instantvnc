@@ -6,6 +6,7 @@
 #include <lmcons.h>
 #include <wininet.h>
 #include <shlobj.h>
+#include <VersionHelpers.h>
 
 #include "../Common/InterfaceDllProxyInfo.h"
 #include "Localization.h"
@@ -32,9 +33,7 @@ static bool IsVista()
 
 	osver.dwOSVersionInfoSize = sizeof( OSVERSIONINFO );
 	
-	if (::GetVersionEx(&osver) && 
-		(osver.dwPlatformId == VER_PLATFORM_WIN32_NT) && 
-		(osver.dwMajorVersion >= 6))
+	if (IsWindowsVistaOrGreater() && !IsWindows7OrGreater())
 		return true;
 
 	return false;

@@ -18,6 +18,7 @@
 //  CommonBase.cpp
 
 #include <windows.h>
+#include <VersionHelpers.h>
 #include "CommonBase.h"
 
 #define ERROR_GETFILESIZE    0xFFFFFFFF
@@ -508,9 +509,7 @@ bool NS_Common::IsVista()
 
 	osver.dwOSVersionInfoSize = sizeof( OSVERSIONINFO );
 	
-	if (::GetVersionEx(&osver) && 
-		(osver.dwPlatformId == VER_PLATFORM_WIN32_NT) && 
-		(osver.dwMajorVersion >= 6))
+	if (IsWindowsVistaOrGreater() && !IsWindows7OrGreater())
 		return true;
 
 	return false;

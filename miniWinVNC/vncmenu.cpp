@@ -37,6 +37,7 @@ extern volatile bool g_bStopped;
 #include <lmcons.h>
 #include <wininet.h>
 #include <shlobj.h>
+#include <VersionHelpers.h>
 
 #include "../Common/InterfaceDllProxyInfo.h"
 #include "Localization.h"
@@ -189,15 +190,9 @@ vncMenu::vncMenu(vncServer *server, int runMode) : m_runMode(runMode), m_server(
 	// record which client created this window
 	SetWindowLong(m_hwnd, GWL_USERDATA, (LONG) this);
 
-	// Load the icons for the tray
-	OSVERSIONINFO	osvi;
-	osvi.dwOSVersionInfoSize = sizeof(osvi);
-	GetVersionEx(&osvi);
-
 	UINT nImageColor = LR_VGACOLOR;
-	if (osvi.dwPlatformId == VER_PLATFORM_WIN32_NT)
-		if (osvi.dwMajorVersion == 5 && osvi.dwMinorVersion >= 1)
-			nImageColor = LR_DEFAULTCOLOR;
+	if (IsWindowsVersionOrGreater(5, 0, 0) && !IsWindowsVistaOrGreater())
+		nImageColor = LR_DEFAULTCOLOR;
 
 	m_winvnc_icon = (HICON)LoadImage(hAppInstance, MAKEINTRESOURCE(IDI_WINVNC), IMAGE_ICON,
 		GetSystemMetrics(SM_CXSMICON), GetSystemMetrics(SM_CYSMICON), nImageColor);
@@ -316,42 +311,38 @@ void
 vncMenu::FlashTrayIcon(BOOL flash)
 {
 	SendTrayMsg(NIM_MODIFY, flash);
-	OSVERSIONINFO	osvi;
-	osvi.dwOSVersionInfoSize = sizeof(osvi);
-	GetVersionEx(&osvi);
-	if (osvi.dwPlatformId == VER_PLATFORM_WIN32_NT)
-		if (osvi.dwMajorVersion >= 6)
+	if (IsWindowsVistaOrGreater())
+	{
+		typedef HRESULT(WINAPI *ISAERO)(BOOL*);
+		typedef HRESULT(WINAPI *CHANGEAERO)(UINT);
+		ISAERO pDwmIsCompositionEnabled = NULL;
+		CHANGEAERO pDwmEnableComposition = NULL;
+		HMODULE hDLL = LoadLibrary("DWMAPI.dll");
+		if (hDLL)
 		{
-			typedef HRESULT (WINAPI *ISAERO)(BOOL*);
-			typedef HRESULT (WINAPI *CHANGEAERO)(UINT);
-			ISAERO pDwmIsCompositionEnabled = NULL;
-			CHANGEAERO pDwmEnableComposition = NULL;
-			HMODULE hDLL = LoadLibrary ("DWMAPI.dll");
-			if (hDLL)
-			{
-				pDwmIsCompositionEnabled = (ISAERO)GetProcAddress(hDLL,"DwmIsCompositionEnabled");
-				pDwmEnableComposition = (CHANGEAERO)GetProcAddress(hDLL,"DwmEnableComposition");
-			}
-			else
-				return;
-
-			if (m_iFlashState == flash)
-				return;
-
-			m_iFlashState = flash;
-			//Disable/Enable Aero Under Vista
-			if (flash)
-			{
-				pDwmIsCompositionEnabled(&m_bWasAero);
-				if (m_bWasAero == TRUE)
-					pDwmEnableComposition(DWM_EC_DISABLECOMPOSITION);
-			}
-			else
-			{
-				if (m_bWasAero == TRUE)
-					pDwmEnableComposition(DWM_EC_ENABLECOMPOSITION);
-			}
+			pDwmIsCompositionEnabled = (ISAERO)GetProcAddress(hDLL, "DwmIsCompositionEnabled");
+			pDwmEnableComposition = (CHANGEAERO)GetProcAddress(hDLL, "DwmEnableComposition");
 		}
+		else
+			return;
+
+		if (m_iFlashState == flash)
+			return;
+
+		m_iFlashState = flash;
+		//Disable/Enable Aero Under Vista
+		if (flash)
+		{
+			pDwmIsCompositionEnabled(&m_bWasAero);
+			if (m_bWasAero == TRUE)
+				pDwmEnableComposition(DWM_EC_DISABLECOMPOSITION);
+		}
+		else
+		{
+			if (m_bWasAero == TRUE)
+				pDwmEnableComposition(DWM_EC_ENABLECOMPOSITION);
+		}
+	}
 }
 
 // Connected to: <echoserver address>

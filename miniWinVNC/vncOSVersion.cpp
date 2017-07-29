@@ -23,32 +23,15 @@
 /////////////////////////////////////////////////////////////////////////////
 
 #include <windows.h>
+#include <VersionHelpers.h>
 
 int
 OSVersion()
 {
-	OSVERSIONINFO OSversion;
-	
-	OSversion.dwOSVersionInfoSize=sizeof(OSVERSIONINFO);
-
-	GetVersionEx(&OSversion);
-
-	switch(OSversion.dwPlatformId)
-	{
-		case VER_PLATFORM_WIN32_NT:
-								  if(OSversion.dwMajorVersion==5 && OSversion.dwMinorVersion==0)
-									 return 1;							    
-								  if(OSversion.dwMajorVersion==5 && OSversion.dwMinorVersion==1)
-									 return 1;
-								  if(OSversion.dwMajorVersion==5)
-									 return 1;
-								  if(OSversion.dwMajorVersion==6)
-									 return 1;
-								  if(OSversion.dwMajorVersion<=4) 	  
-								     return 3;
-		case VER_PLATFORM_WIN32_WINDOWS:
-								if(OSversion.dwMinorVersion==0) return 5; //95
-								return 4;
+	if (IsWindowsVersionOrGreater(5, 0, 0)) {
+		return 1;
+	} else {
+		return 3;
 	}
 	return 0;
 }
